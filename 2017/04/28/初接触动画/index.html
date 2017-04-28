@@ -6,24 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>iOS单例 | 李欣烨的博客</title>
+  <title>初接触动画 | 李欣烨的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="昨天在项目里集成了MQTT，搜索了一下资源，明确表示MQTTKit已经停止更新，MQTTClient持续更新。。结果，不管怎么操作，Client都接收不到信息，搞不明白什么原因，最终还是选择使用的MQTTKit。（不更新了说明太完美了。。不需要了，恩就是这样）。">
+  <meta name="description" content="先贴图：   具体需求是虚线需要做一个弧线运动，在运动的同时，弧线内部进行一个平移动画的填充。我在新浪博客上做过简单的描述也粘贴了代码，如果有需要的可以看一下。（刚刚接触，可能不是好办法，望见谅，有大神指导更好。来者不拒😆😆😆）博客地址：李欣烨-新浪博客">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iOS单例">
-<meta property="og:url" content="http://yoursite.com/2017/04/28/iOS单例/index.html">
+<meta property="og:title" content="初接触动画">
+<meta property="og:url" content="http://yoursite.com/2017/04/28/初接触动画/index.html">
 <meta property="og:site_name" content="李欣烨的博客">
-<meta property="og:description" content="昨天在项目里集成了MQTT，搜索了一下资源，明确表示MQTTKit已经停止更新，MQTTClient持续更新。。结果，不管怎么操作，Client都接收不到信息，搞不明白什么原因，最终还是选择使用的MQTTKit。（不更新了说明太完美了。。不需要了，恩就是这样）。">
-<meta property="og:image" content="http://i2.muimg.com/524586/463fd983bf73362as.png">
-<meta property="og:image" content="http://i2.muimg.com/524586/c4dddfbe1fc1b143s.png">
-<meta property="og:image" content="http://i2.muimg.com/524586/cdb06e33adbecca0s.png">
-<meta property="og:image" content="http://i2.muimg.com/524586/9a7d7d3a808b56aas.png">
-<meta property="og:updated_time" content="2017-04-28T09:22:41.000Z">
+<meta property="og:description" content="先贴图：   具体需求是虚线需要做一个弧线运动，在运动的同时，弧线内部进行一个平移动画的填充。我在新浪博客上做过简单的描述也粘贴了代码，如果有需要的可以看一下。（刚刚接触，可能不是好办法，望见谅，有大神指导更好。来者不拒😆😆😆）博客地址：李欣烨-新浪博客">
+<meta property="og:image" content="http://chuantu.biz/t5/75/1493372040x2728328981.png">
+<meta property="og:updated_time" content="2017-04-28T09:37:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS单例">
-<meta name="twitter:description" content="昨天在项目里集成了MQTT，搜索了一下资源，明确表示MQTTKit已经停止更新，MQTTClient持续更新。。结果，不管怎么操作，Client都接收不到信息，搞不明白什么原因，最终还是选择使用的MQTTKit。（不更新了说明太完美了。。不需要了，恩就是这样）。">
-<meta name="twitter:image" content="http://i2.muimg.com/524586/463fd983bf73362as.png">
+<meta name="twitter:title" content="初接触动画">
+<meta name="twitter:description" content="先贴图：   具体需求是虚线需要做一个弧线运动，在运动的同时，弧线内部进行一个平移动画的填充。我在新浪博客上做过简单的描述也粘贴了代码，如果有需要的可以看一下。（刚刚接触，可能不是好办法，望见谅，有大神指导更好。来者不拒😆😆😆）博客地址：李欣烨-新浪博客">
+<meta name="twitter:image" content="http://chuantu.biz/t5/75/1493372040x2728328981.png">
   
     <link rel="alternative" href="/atom.xml" title="李欣烨的博客" type="application/atom+xml">
   
@@ -157,38 +154,28 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-iOS单例" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-初接触动画" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      iOS单例
+      初接触动画
     </h1>
   
 
         
-        <a href="/2017/04/28/iOS单例/" class="archive-article-date">
-  	<time datetime="2017-04-28T09:12:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-28</time>
+        <a href="/2017/04/28/初接触动画/" class="archive-article-date">
+  	<time datetime="2017-04-28T09:25:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>昨天在项目里集成了MQTT，搜索了一下资源，明确表示MQTTKit已经停止更新，MQTTClient持续更新。。结果，不管怎么操作，Client都接收不到信息，搞不明白什么原因，最终还是选择使用的MQTTKit。（不更新了说明太完美了。。不需要了，恩就是这样）。<a id="more"></a></p>
-<p>昨天在项目里集成了MQTT，搜索了一下资源，明确表示MQTTKit已经停止更新，MQTTClient持续更新。。结果，不管怎么操作，Client都接收不到信息，搞不明白什么原因，最终还是选择使用的MQTTKit。（不更新了说明太完美了。。不需要了，恩就是这样）。</p>
-<p>今天早上要对MQTT进行一个单例的封装，结果对于这方面基本新手的我来说，失败了。。。重新学习了一下单例的封装。贴上代码以作以后参考。   </p>
-<p>单例.h文件  </p>
-<p><img src="http://i2.muimg.com/524586/463fd983bf73362as.png" alt="MQTTSDZN.h"></p>
-<p>单例.m文件  </p>
-<p><img src="http://i2.muimg.com/524586/c4dddfbe1fc1b143s.png" alt="MQTTSDZN.m"></p>
-<p>AppDelegate.m  </p>
-<p><img src="http://i2.muimg.com/524586/cdb06e33adbecca0s.png" alt="Appdelegate.m"></p>
-<p>MQTTViewController.m中直接调用发送数据方法  </p>
-<p><img src="http://i2.muimg.com/524586/9a7d7d3a808b56aas.png" alt="SendMessage"></p>
-<p>至此，MQTT单例创建完毕，发送消息和接收消息都可以直接在各个界面调用，目前测试，接收放在了AppDelegate中了，如果有需要，可直接如上图发送数据方法直接调用。</p>
+        <p>先贴图：<br><img src="http://chuantu.biz/t5/75/1493372040x2728328981.png" alt="需求">  </p>
+<p>具体需求是虚线需要做一个弧线运动，在运动的同时，弧线内部进行一个平移动画的填充。我在新浪博客上做过简单的描述也粘贴了代码，如果有需要的可以看一下。（刚刚接触，可能不是好办法，望见谅，有大神指导更好。来者不拒😆😆😆）<br>博客地址：<a href="http://blog.sina.com.cn/u/6178932890" target="_blank" rel="external">李欣烨-新浪博客</a></p>
 
       
 
@@ -278,7 +265,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/04/28/iOS单例/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/04/28/初接触动画/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -292,11 +279,15 @@
   
 <nav id="article-nav">
   
-  
-    <a href="/2017/04/28/初接触动画/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">初接触动画</div>
-      <i class="icon-circle-right"></i>
+    <a href="/2017/04/28/iOS单例/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          iOS单例
+        
+      </div>
     </a>
+  
   
 </nav>
 
