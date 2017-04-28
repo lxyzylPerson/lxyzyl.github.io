@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/28/iOS回弹动画/index.html">
 <meta property="og:site_name" content="李欣烨的博客">
 <meta property="og:description" content="需求是需要做一个由上而下的弹窗，基本控件是一根白色绳子下连接一个view（UI就不提供了），在几秒内落到设置的最低点后向上回弹一小段距离然后落回到最低点。">
-<meta property="og:updated_time" content="2017-04-28T10:33:08.000Z">
+<meta property="og:updated_time" content="2017-04-28T10:36:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS回弹动画">
 <meta name="twitter:description" content="需求是需要做一个由上而下的弹窗，基本控件是一根白色绳子下连接一个view（UI就不提供了），在几秒内落到设置的最低点后向上回弹一小段距离然后落回到最低点。">
@@ -177,19 +177,23 @@
 <ul>
 <li><p>1.设置view在3秒内变为透明<br>+(void)animateWithDuration:(NSTimeInterval)duration animations:(void (^)(void))animations;</p>
 <blockquote>
-<p>[UIView animateWithDuration:3 animations:^{<br>  lxyView.alpha = 0;<br>  }];</p>
+<p>[UIView animateWithDuration:3 animations:^{</p>
+<pre><code>lxyView.alpha = 0;
+</code></pre><p>  }];</p>
 </blockquote>
 </li>
 </ul>
 <ul>
 <li><p>2.view在3秒内变为透明，最后透明度又变回1<br>+(void)animateWithDuration:(NSTimeInterval)duration animations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion;</p>
 <blockquote>
-<p>[UIView animateWithDuration:1 animations:^{<br>  lxyView.alpha =0;<br>  }completion:^(BOOL finished) {</p>
+<p>[UIView animateWithDuration:1 animations:^{</p>
+<pre><code>lxyView.alpha =0;
+</code></pre><p>  }completion:^(BOOL finished) {</p>
 <pre><code>if (finished) {
     lxyView.alpha =1;
-  }
-</code></pre><p>  }];  </p>
-</blockquote>
+    }
+  }];  
+</code></pre></blockquote>
 </li>
 </ul>
 <ul>
