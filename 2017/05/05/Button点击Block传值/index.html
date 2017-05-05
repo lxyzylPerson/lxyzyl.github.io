@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/05/05/Button点击Block传值/index.html">
 <meta property="og:site_name" content="李欣烨的博客">
 <meta property="og:description" content="平时用到的button点击block传值，仅用于新手= =、比如我这样的。">
-<meta property="og:updated_time" content="2017-05-05T07:52:28.000Z">
+<meta property="og:updated_time" content="2017-05-05T07:56:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Button点击Block传值">
 <meta name="twitter:description" content="平时用到的button点击block传值，仅用于新手= =、比如我这样的。">
@@ -179,12 +179,11 @@
 <li>1、自定义类型<br>   <code>typedef void (^ReturnValueBlock) (NSString *strValue);</code></li>
 <li>2、声明一个ReturnValueBlock属性，这个Block是获取传值的界面传进来的<br>   <code>@property(nonatomic, copy) ReturnValueBlock returnValueBlock;</code>  </li>
 </ul>
-<p>push到的界面.m中</p>
-<pre><code> `if (self.returnValueBlock) {
-    //将自己的值传出去，完成传值
-    self.returnValueBlock(inputString);
-}`
-</code></pre><p>首页中接收数据<br>      <code>nextvc.returnValueBlock = ^(NSString *passedValue){
+<p>push到的界面.m中<br><code>if (self.returnValueBlock){  
+//将自己的值传出去，完成传值  
+self.returnValueBlock(inputString);  
+}</code></p>
+<p>首页中接收数据<br>      <code>nextvc.returnValueBlock = ^(NSString *passedValue){
         NSLog(@&quot;传值过来的是---%@&quot;,passedValue);
     };</code></p>
 
