@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>李欣烨的博客</title>
+  <title>Button点击Block传值 | 李欣烨的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="李欣烨的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="平时用到的button点击block传值，仅用于新手= =、比如我这样的。">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Button点击Block传值">
+<meta property="og:url" content="http://yoursite.com/2017/05/05/Button点击Block传值/index.html">
 <meta property="og:site_name" content="李欣烨的博客">
+<meta property="og:description" content="平时用到的button点击block传值，仅用于新手= =、比如我这样的。">
+<meta property="og:updated_time" content="2017-05-05T07:52:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="李欣烨的博客">
+<meta name="twitter:title" content="Button点击Block传值">
+<meta name="twitter:description" content="平时用到的button点击block传值，仅用于新手= =、比如我这样的。">
   
     <link rel="alternative" href="/atom.xml" title="李欣烨的博客" type="application/atom+xml">
   
@@ -147,16 +152,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Button点击Block传值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Button点击Block传值" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/05/Button点击Block传值/">Button点击Block传值</a>
+    <h1 class="article-title" itemprop="name">
+      Button点击Block传值
     </h1>
   
 
@@ -169,62 +172,55 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>平时用到的button点击block传值，仅用于新手= =、比如我这样的。
-        
-          <a class="article-more-a" href="/2017/05/05/Button点击Block传值/#more">more >></a>
-        
+        <p>平时用到的button点击block传值，仅用于新手= =、比如我这样的。<a id="more"></a>  </p>
+<p>代码如下：</p>
+<p>push到的界面.h中</p>
+<ul>
+<li>1、自定义类型<br>   <code>typedef void (^ReturnValueBlock) (NSString *strValue);</code></li>
+<li>2、声明一个ReturnValueBlock属性，这个Block是获取传值的界面传进来的<br>   <code>@property(nonatomic, copy) ReturnValueBlock returnValueBlock;</code>  </li>
+</ul>
+<p>push到的界面.m中</p>
+<pre><code> `if (self.returnValueBlock) {
+    //将自己的值传出去，完成传值
+    self.returnValueBlock(inputString);
+}`
+</code></pre><p>首页中接收数据<br>      <code>nextvc.returnValueBlock = ^(NSString *passedValue){
+        NSLog(@&quot;传值过来的是---%@&quot;,passedValue);
+    };</code></p>
+
       
 
       
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/05/Button点击Block传值/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-iOS回弹动画" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/28/iOS回弹动画/">iOS回弹动画</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/28/iOS回弹动画/" class="archive-article-date">
-  	<time datetime="2017-04-28T09:59:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>需求是需要做一个由上而下的弹窗，基本控件是一根白色绳子下连接一个view（UI就不提供了），在几秒内落到设置的最低点后向上回弹一小段距离然后落回到最低点。
-        
-          <a class="article-more-a" href="/2017/04/28/iOS回弹动画/#more">more >></a>
-        
-      
-
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://i4.buimg.com/524586/7939a6a876479e02s.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://i4.buimg.com/524586/9e10b263cdb5d8abs.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -233,185 +229,89 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/28/iOS回弹动画/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/05/05/Button点击Block传值/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
   
-    <article id="post-JYCarousel-Dely哥独创" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/28/JYCarousel-Dely哥独创/">JYCarousel-Dely哥独创</a>
-    </h1>
+    <a href="/2017/04/28/iOS回弹动画/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          iOS回弹动画
+        
+      </div>
+    </a>
   
-
-        
-        <a href="/2017/04/28/JYCarousel-Dely哥独创/" class="archive-article-date">
-  	<time datetime="2017-04-28T09:46:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>开源库名称： JYCarousel</p>
-<p>开源库当前版本： 0.0.1</p>
-<p>开源库github地址：<a href="https://github.com/Delyer/JYCarousel">https://github.com/Delyer/JYCarousel</a></p>
-<p>开源库简介： 这是一个使用起来非常简单的开源轮播库，自带下载和缓存，不会造成循环引用，不用考虑定时器不会销毁（我都已经帮你做好了）。
-        
-          <a class="article-more-a" href="/2017/04/28/JYCarousel-Dely哥独创/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/28/JYCarousel-Dely哥独创/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+  
+</nav>
 
 
 
 
 
   
-    <article id="post-初接触动画" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/28/初接触动画/">初接触动画</a>
-    </h1>
   
 
-        
-        <a href="/2017/04/28/初接触动画/" class="archive-article-date">
-  	<time datetime="2017-04-28T09:25:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>先贴图：<br><img src="http://chuantu.biz/t5/75/1493372040x2728328981.png" alt="需求">  </p>
-<p>具体需求是虚线需要做一个弧线运动，在运动的同时，弧线内部进行一个平移动画的填充。我在新浪博客上做过简单的描述也粘贴了代码，如果有需要的可以看一下。（刚刚接触，可能不是好办法，望见谅，有大神指导更好。来者不拒😆😆😆）<br>博客地址：<a href="http://blog.sina.com.cn/u/6178932890" target="_blank" rel="external">李欣烨-新浪博客</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/28/初接触动画/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-iOS单例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/28/iOS单例/">iOS单例</a>
-    </h1>
   
 
-        
-        <a href="/2017/04/28/iOS单例/" class="archive-article-date">
-  	<time datetime="2017-04-28T09:12:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>昨天在项目里集成了MQTT，搜索了一下资源，明确表示MQTTKit已经停止更新，MQTTClient持续更新。。结果，不管怎么操作，Client都接收不到信息，搞不明白什么原因，最终还是选择使用的MQTTKit。（不更新了说明太完美了。。不需要了，恩就是这样）。
-        
-          <a class="article-more-a" href="/2017/04/28/iOS单例/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/28/iOS单例/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
 
 
@@ -434,8 +334,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
